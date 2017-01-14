@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/churchie317/inclsv/issues"
   },
-  "homepage": "https://github.com/churchie317/inclsv#readme"
+  "homepage": "https://github.com/churchie317/inclsv#readme",
+  "dependencies": {
+    "inquirer": "^2.0.0",
+    "yargs": "^6.6.0"
+  }
 }
