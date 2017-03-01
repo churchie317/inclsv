@@ -1,20 +1,14 @@
 {
   "genderBinary": {
-    "possessivePronouns": [
-      "his",
-      "hers"
-    ],
-    "objectPronouns": [
-      "he",
-      "she",
-    ],
-    "subjectPronouns": [
-      "him",
-      "her"
-    ]
+    "his": "possessivePronouns",
+    "hers": "possessivePronouns",
+    "he": "objectPronouns",
+    "she": "objectPronouns",
+    "him": "subjectPronouns",
+    "her": "subjectPronouns"
   },
-  "nonGenderBinary": {
-    "possessivePronouns": "theirs",
+  "genderFluid": {
+    "possessivePronouns": "their",
     "objectPronouns": "them",
     "subjectPronouns": "they"
   }
