@@ -28,7 +28,7 @@
   "rules": {
     "strict": ["error", "global"],
     "no-unused-vars": ["error", { "vars": "all", "args": "none", "caughtErrors": "none" }],
-    "no-console": ["error", { allow: ["warn", "error, log"] }],
+    "no-console": ["error", { allow: ["warn", "error"] }],
     "camelcase": ["error", { "properties": "always" }],
     "consistent-return": "error",
     "arrow-spacing": "error",
