@@ -2,7 +2,7 @@
   "name": "inclsv",
   "version": "0.0.0-development",
   "description": "An NPM module that converts instances of gender-binary pronouns to non-binary",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "cross-env NODE_ENV=test nyc mocha",
     "validate": "npm-run-all --parallel lint test build",
@@ -26,6 +26,9 @@
   "bin": {
     "inclsv": "dist/bin/index.js"
   },
+  "files": [
+    "dist"
+  ],
   "nyc": {
     "check-coverage": true,
     "functions": 0,
