@@ -4,7 +4,12 @@
   "description": "An NPM module that converts instances of gender-binary pronouns to non-binary",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cross-env NODE_ENV=test nyc mocha",
+    "validate": "npm-run-all --parallel lint test build",
+    "lint": "eslint /src",
+    "prebuild": "rimraf dist",
+    "build": "npm-run-all --parallel build:*",
+    "build:main": "babel --out-dir dist --ignore *.test.js --copy-files src"
   },
   "repository": {
     "type": "git",
@@ -17,8 +22,43 @@
     "url": "https://github.com/churchie317/inclsv/issues"
   },
   "homepage": "https://github.com/churchie317/inclsv#readme",
+  "bin": {
+    "inclsv": "dist/bin/index.js"
+  },
+  "nyc": {
+    "check-coverage": true,
+    "functions": 0,
+    "lines": 0,
+    "statements": 0,
+    "reporter": [
+      "text",
+      "lcov"
+    ],
+    "instrument": false,
+    "sourceMap": false,
+    "require": [
+      "babel-register"
+    ],
+    "include": [
+      "src"
+    ]
+  },
   "dependencies": {
     "inquirer": "^2.0.0",
     "yargs": "^6.6.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.23.0",
+    "babel-eslint": "^7.1.1",
+    "babel-plugin-istanbul": "^4.0.0",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-register": "^6.23.0",
+    "chai": "^3.5.0",
+    "cross-env": "^3.1.4",
+    "eslint": "^3.16.1",
+    "mocha": "^3.2.0",
+    "npm-run-all": "^4.0.2",
+    "nyc": "^10.1.2",
+    "rimraf": "^2.6.1"
   }
 }
