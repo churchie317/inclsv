@@ -14,7 +14,7 @@ export function readPronouns() {
 }
 
 // traverse directory in parallel
-// returns all files in a directory as a flat array
+// returns all files in directory as flat array
 export function getFlatDirectoryTree(dir) {
   return new Promise((resolve, reject) => {
     fs.readdir(dir, (err, files) => {
