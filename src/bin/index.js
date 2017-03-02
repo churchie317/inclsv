@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import path from 'path'
+import path from 'path';
 import yargs from 'yargs';
 
 import inclsv from '../index';
@@ -18,7 +18,7 @@ yargs
 
 function generate(options) {
   if (path.isAbsolute(options.dir)) {
-    return inclsv(path.resolve(__dirname, options.dir.slice(1))).then(console.log);
+    options.dir = options.dir.slice(1);
   }
   return inclsv(path.resolve(__dirname, options.dir)).then(console.log);
 }

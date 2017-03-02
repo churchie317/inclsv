@@ -49,5 +49,8 @@ function inclsv(dir) {
     // filter filesArray for files ending in .md
     filesArray.filter((file) => (file.slice(-3)).toLowerCase() === '.md')
   )
+  .then((markdownArray) => {
+    console.log(`successfully found ${ markdownArray.length } Markdown files`);
+  })
   .catch(console.error);
 }
