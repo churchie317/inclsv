@@ -14,7 +14,7 @@ node_js:
 script:
   - npm run validate
 after_success:
-  - npm run release
+  - npm run semantic-release
 branches:
   only:
     - master

@@ -1,6 +1,6 @@
 {
   "name": "inclsv",
-  "version": "1.1.2",
+  "version": "0.0.0-development",
   "description": "An NPM module that converts instances of gender-binary pronouns to non-binary",
   "main": "index.js",
   "scripts": {
@@ -10,11 +10,11 @@
     "prebuild": "rimraf dist",
     "build": "npm-run-all --parallel build:*",
     "build:main": "babel --out-dir dist --ignore *.test.js --copy-files src",
-    "release": "semantic-release pre && npm publish && semantic-release post"
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/churchie317/inclsv.git"
+    "url": "https://github.com/churchie317/inclsv.git"
   },
   "keywords": [],
   "author": "",
