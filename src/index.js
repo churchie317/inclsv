@@ -46,6 +46,7 @@ export function getFlatDirectoryTree(dir) {
 
 function inclsv(dir) {
   return getFlatDirectoryTree(dir).then((filesArray) =>
+    // filter filesArray for files ending in .md
     filesArray.filter((file) => (file.slice(-3)).toLowerCase() === '.md')
   )
   .catch(console.error);
